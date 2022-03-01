@@ -5,6 +5,16 @@ const FormHandle = () => {
     const[name,setName]=useState('');
     const[password,setPassword]=useState('');
     const[email,setEmail]=useState('')
+    const handleButton=(e)=>{
+        e.preventDefault()
+        const data ={
+            name:name,
+            password:password,
+            email:email
+        }
+        console.log(data)
+
+    }
 
     const handleName=(e)=>{
        const nameValue = e.target.value;
@@ -17,10 +27,7 @@ const FormHandle = () => {
     const handleEmail=(e)=>{
         setEmail(e.target.value)
     }
-    const handleButton=()=>{
-        console.log("clicked")
-
-    }
+   
     return (
         <>
         <Form>
@@ -36,7 +43,7 @@ const FormHandle = () => {
               <input name="password" type="email" value={email} onChange={(e)=>handleEmail(e)}></input>
           </label>
           <br/>
-          <button onClick={()=>handleButton()}>Submit</button>
+          <button onClick={(e)=>handleButton(e)}>Submit</button>
         </Form>
         </>
     );
