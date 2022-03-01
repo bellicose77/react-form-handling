@@ -14,8 +14,9 @@ const FormHandle = () => {
             password:password,
             email:email
         }
+        sessionStorage.setItem('formData',JSON.stringify(data))
         //console.log(data)
-        navigate("/anotherpage")
+        navigate("/home/anotherpage")
 
     }
 

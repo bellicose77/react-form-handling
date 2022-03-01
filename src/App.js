@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="home" element={<FormHandle/>}/>
-        <Route path="/anotherpage" element={<ShowData/>}/>
+        <Route path="home/anotherpage" element={<ShowData/>}/>
 
       </Routes>
       </BrowserRouter>
