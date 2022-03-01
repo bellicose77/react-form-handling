@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const FormHandle = () => {
     const[name,setName]=useState('');
     const[password,setPassword]=useState('');
     const[email,setEmail]=useState('')
+    let navigate = useNavigate()
     const handleButton=(e)=>{
         e.preventDefault()
         const data ={
@@ -12,7 +14,8 @@ const FormHandle = () => {
             password:password,
             email:email
         }
-        console.log(data)
+        //console.log(data)
+        navigate("/anotherpage")
 
     }
 
